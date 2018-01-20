@@ -1,3 +1,3 @@
 $( document ).on( "pagecreate", "#list", function( event ) {
-    alert( "This page was just enhanced by jQuery Mobile!" );
+    $('content-list').append('<li><a href="#view?id=1">TESTE #1</a></li>');
   });
