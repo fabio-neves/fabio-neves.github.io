@@ -2,13 +2,14 @@ var pedido = new Array();
 
 $( document ).on( "pagebeforeshow", "#view", function( event ) {  
 console.log("pagebeforeshow");
-
-$.each(pedido, function(item)
+$("#pedido-list").empty();
+$.each(pedido, function(idx)
 {
-    $("#pedido-list").empty();
-    $("#pedido-list").append("<li>" +item+ "</li>");
-    $("#pedido-list").listview('refresh');
+    
+    $("#pedido-list").append("<li>"+ pedido[idx]+ "</li>");
+    
 });
+$("#pedido-list").listview('refresh');
 
 } );
 
