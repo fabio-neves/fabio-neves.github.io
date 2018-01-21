@@ -12,7 +12,7 @@ $( document ).on( "pagecreate", "#list", function( event ) {
         $('#meupedido').attr("href", _href + item  + "%0A");
         $('#pedido-list').append("<li>"+item+"</li>");
         } else {
-            $('#meupedido').find('li').each(function(){
+            $('#pedido-list').find('li').each(function(){
                 var itempedido = $(this);
 
                 if(itempedido.text() == item){
