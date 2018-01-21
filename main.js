@@ -3,10 +3,14 @@ var pedido = new Array();
 $( document ).on( "pagebeforeshow", "#view", function( event ) {  
 console.log("pagebeforeshow");
 $("#pedido-list").empty();
+$('#meupedido').attr("href", "whatsapp://send?text=");    
+
 $.each(pedido, function(idx)
 {
     
     $("#pedido-list").append("<li>"+ pedido[idx]+ "</li>");
+    var _href = $('#meupedido').attr("href");
+    $('#meupedido').attr("href", _href + pedido[idx]  + "%0A");    
     
 });
 $("#pedido-list").listview('refresh');
@@ -22,8 +26,6 @@ $( document ).on( "pagecreate", "#list", function( event ) {
         var item = that.val();
 
         if(that.is(":checked")) {
-            var _href = $('#meupedido').attr("href");
-            $('#meupedido').attr("href", _href + item  + "%0A");
             pedido.push(item);
         } else {
             var idx = pedido.indexOf(item); 
