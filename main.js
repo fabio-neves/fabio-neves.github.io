@@ -1,11 +1,14 @@
 $( document ).on( "pagecreate", "#list", function( event ) {
     
 
-    $('.add').on("click", function () {
+    $(':checkbox').on("click", function () {
+        var that = $(this);
+
+        var item = that.val();
+
         var _href = $('#meupedido').attr("href");
-        $('#meupedido').attr("href", _href + $(this).text()  + "%0A");
-        $('#pedido-list').append("<li>"+$(this).text()+"</li>");
-        $('#addedToRequets').popup( "open" );
+        $('#meupedido').attr("href", _href + item  + "%0A");
+        $('#pedido-list').append("<li>"+item+"</li>");
     });
     
   });
