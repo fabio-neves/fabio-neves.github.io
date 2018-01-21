@@ -3,12 +3,14 @@ var pedido = new Array();
 $( document ).on( "pagebeforeshow", "#view", function( event ) {  
 console.log("pagebeforeshow");
 
-} );
+$.each(pedido, function(item)
+{
+    $("pedido-list").empty();
+    $("pedido-list").append("<li>" +item+ "</li>");
+    $("pedido-list").listview('refresh');
+});
 
-$( document ).on( "pagebeforeload", "#view", function( event ) {  
-    console.log("pagebeforeload");
-    
-    } );
+} );
 
 $( document ).on( "pagecreate", "#list", function( event ) {
     
