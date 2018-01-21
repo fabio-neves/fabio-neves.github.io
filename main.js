@@ -1,9 +1,11 @@
 $( document ).on( "pagecreate", "#list", function( event ) {
     
 
-    $(':checkbox').on("click", function () {
+    $(':a').on("click", function () {
         var _href = $('#meupedido').attr("href");
-        $('#meupedido').attr("href", _href + $(this).parent().find('span').text() + "HELLO2" + "%0A");
+        $('#meupedido').attr("href", _href + $(this).text()  + "%0A");
+        $('#pedido-list').append("<li>"+$(this).text()+"</li>");
+        $('#pedido-list').listview("refresh");
     });
     
   });
