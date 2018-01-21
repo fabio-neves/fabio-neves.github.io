@@ -6,7 +6,7 @@ $( document ).on( "pagecreate", "#list", function( event ) {
 
         var item = that.val();
 
-        if(that.checked) {
+        if(that.is(":checked")) {
 
         var _href = $('#meupedido').attr("href");
         $('#meupedido').attr("href", _href + item  + "%0A");
