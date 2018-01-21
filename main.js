@@ -19,7 +19,10 @@ $( document ).on( "pagecreate", "#list", function( event ) {
                     itempedido.remove();
                 }
             });
+        
         }
+        $('#pedido-list').listview();
+        $('#pedido-list').listview('refresh');
     });
     
   });
