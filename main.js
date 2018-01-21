@@ -5,9 +5,9 @@ console.log("pagebeforeshow");
 
 $.each(pedido, function(item)
 {
-    $("pedido-list").empty();
-    $("pedido-list").append("<li>" +item+ "</li>");
-    $("pedido-list").listview('refresh');
+    $("#pedido-list").empty();
+    $("#pedido-list").append("<li>" +item+ "</li>");
+    $("#pedido-list").listview('refresh');
 });
 
 } );
@@ -25,7 +25,7 @@ $( document ).on( "pagecreate", "#list", function( event ) {
             $('#meupedido').attr("href", _href + item  + "%0A");
             pedido.push(item);
         } else {
-            var idx = pedido.indexOf(search_term); 
+            var idx = pedido.indexOf(item); 
             if (idx !== -1) {
                 pedido.splice(idx, 1);
             }
