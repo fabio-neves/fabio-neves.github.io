@@ -1,7 +1,7 @@
 var pedido = new Array();
 
 $( document ).on( "pagebeforeshow", "#view", function( event ) {  
-console.log("pagebeforeshow");
+console.log(menu);
 $("#pedido-list").empty();
 $('#meupedido').attr("href", "whatsapp://send?text=");    
 
