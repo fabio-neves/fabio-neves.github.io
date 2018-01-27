@@ -4,6 +4,7 @@ var pedido = new Array();
  * Build Menu Page
  */
 $(document).on("pagebeforecreate", "#menu", function (event) { 
+    console.log("[Menu] pagebeforecreate");
     for (var k in menu) {
         $("#mainmenu").append("<li>"+ menu[k].label + "</li>");
     }    
