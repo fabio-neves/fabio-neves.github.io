@@ -6,8 +6,24 @@ var pedido = new Array();
 $(document).on("pagebeforecreate", "#menu", function (event) { 
     console.log("[Menu] pagebeforecreate");
     for (var k in menu) {
-        $("#mainmenu").append("<li>"+ menu[k].label + "</li>");
+        $("#mainmenu").append("<li class='navigate' data-menu='"+k+"'>"+ menu[k].label + "</li>");
     }    
+});
+
+$( document ).on( "pagebeforechange" , function ( event, data ) {
+    if ( data.toPage[0].id == "view" ) {
+        var menu = data.options.menu;
+        console.log(menu);
+    }
+});
+
+$(document).on("pagecreate", "#menu", function (event) {
+    $(".navigate").on("click", function () {
+        $.mobile.pageContainer.pagecontainer("change", "#view", {
+            menu: this.data("menu"),
+            transition: "slide"
+        });
+    });
 });
 
 $(document).on("pagebeforeshow", "#view", function (event) {      
