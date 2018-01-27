@@ -1,5 +1,5 @@
-var menu = [
-    { 
+var menu = {
+    combos : { 
         label : "Hare Combos",
         items :[
             {
@@ -16,32 +16,28 @@ var menu = [
             }
         ]
     },
-    { 
+    pratos : { 
         label : "Monte seu prato",
         items :[]
     },
-    { 
+    petiscos : { 
         label : "Petiscos",
         items :[]
     },
-    { 
+    saladas : { 
         label : "Saladas",
         items :[]
     },
-    { 
+    sopas : { 
         label : "Sopas",
         items :[]
     },
-    { 
+    bebidas : { 
         label : "Bebidas",
         items :[]
     },
-    { 
+    sobremesas : { 
         label : "Sobremesas",
         items :[]
-    },
-    { 
-        label : "Outros",
-        items :[]
     }
-]
+}
