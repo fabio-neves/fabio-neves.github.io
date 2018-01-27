@@ -39,5 +39,9 @@ var menu = [
     { 
         label : "Sobremesas",
         items :[]
+    },
+    { 
+        label : "Outros",
+        items :[]
     }
 ]
