@@ -20,7 +20,7 @@ $( document ).on( "pagebeforechange" , function ( event, data ) {
 $(document).on("pagecreate", "#menu", function (event) {
     $(".navigate").on("click", function () {
         $.mobile.pageContainer.pagecontainer("change", "#view", {
-            menu: this.data("menu"),
+            menu: $(this).data("menu"),
             transition: "slide"
         });
     });
