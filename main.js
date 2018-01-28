@@ -53,7 +53,7 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
         $("#bebidas").empty();
         $("#acompanhamentos").empty();
 
-        for (var k in menu["bebida"].items) {
+        for (var k in menu["bebidas"].items) {
             $("#bebidas").append("<input type='radio' name='bebidas' id='bebidas"+k+"' value='' >");
             $("#bebidas").append("<label for='bebidas"+k+"'>"+menu["bebida"].items[k].nome+"</label>");
             $("#bebidas" + k).checkboxradio();
