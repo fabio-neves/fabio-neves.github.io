@@ -9,23 +9,28 @@ $(document).on("pagebeforecreate", "#menu", function (event) {
     }    
 });
 
-$( document ).on( "pagebeforechange" , function ( event, data ) {
-    if ( data.toPage[0].id == "view" ) {
-        var menuLabel = data.options.menu;
-        for (var k in menu[menuLabel].items) {
-            console.log(menu[menuLabel].items[k].nome);
-        }
-    }
-});
-
+/**
+ * Add Events (Menu Page)
+ */
 $(document).on("pagecreate", "#menu", function (event) {
     $(".navigate").on("click", function () {
-        $.mobile.pageContainer.pagecontainer("change", "#view", {
+        $.mobile.pageContainer.pagecontainer("change", "#categoria", {
             menu: $(this).data("menu"),
             transition: "slide"
         });
     });
 });
+
+$( document ).on( "pagebeforechange" , function ( event, data ) {
+    if ( data.toPage[0].id === "categoria" ) {
+        var menuLabel = data.options.menu;
+        for (var k in menu[menuLabel].items) {
+            $("#listaproduto").append("<li class='navigate' data-preco='"+menu[menuLabel].items[k].preco+"'>"+ menu[menuLabel].items[k].nome + "</li>");
+        }
+    }
+});
+
+
 
 $(document).on("pagebeforeshow", "#view", function (event) {      
     $("#pedido-list").empty();
