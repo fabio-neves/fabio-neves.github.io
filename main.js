@@ -11,9 +11,9 @@ $(document).on("pagebeforecreate", "#menu", function (event) {
 
 $( document ).on( "pagebeforechange" , function ( event, data ) {
     if ( data.toPage[0].id == "view" ) {
-        var menuList = data.options.menu;
-        for (var k in menuList[menu].items) {
-            console.log(menuList[menu].items[k].nome);
+        var menuLabel = data.options.menu;
+        for (var k in menu[menuLabel].items) {
+            console.log(menu[menuLabel].items[k].nome);
         }
     }
 });
