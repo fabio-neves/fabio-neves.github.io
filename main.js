@@ -45,6 +45,11 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
 });
 
 
+$( document ).on( "navigate", function( event, data ){
+    console.log(data);
+});
+
+
 
 $(document).on("pagebeforeshow", "#view", function (event) {      
     $("#pedido-list").empty();
