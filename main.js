@@ -26,7 +26,7 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
         $("#listaproduto").empty();
 
         var menuLabel = data.options.menu;
-        if (menuLabel != null && menuLabel == "" && menu[menuLabel] && menu[menuLabel].items) {
+        if (menuLabel != null && menuLabel != "" && menu[menuLabel] && menu[menuLabel].items) {
             for (var k in menu[menuLabel].items) {
                 $("#listaproduto").append("<li class='navigate' data-preco='"+menu[menuLabel].items[k].preco+"'>"+ menu[menuLabel].items[k].nome + "</li>");
             }
