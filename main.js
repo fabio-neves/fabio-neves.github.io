@@ -14,10 +14,13 @@ $(document).on("pagebeforecreate", "#menu", function (event) {
  */
 $(document).on("pagecreate", "#menu", function (event) {
     $(".navigate", "#menu").on("click", function () {
-        $.mobile.pageContainer.pagecontainer("change", "#categoria", {
-            menu: $(this).data("menu"),
-            transition: "slide"
+        $.mobile.navigate( "#categoria", {
+            menu: $(this).data("menu")
         });
+        // $.mobile.pageContainer.pagecontainer("change", "#categoria", {
+        //     menu: $(this).data("menu"),
+        //     transition: "slide"
+        // });
     });
 });
 
