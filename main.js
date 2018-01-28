@@ -45,7 +45,7 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
     }
 });
 
-$(window).on("navigate", function(event,data){
+$(document).on('pagebeforechange', function(event, data) {
     if (typeof data.toPage == "string") {
         console.log('user press back or foward button');
         event.preventDefault();
