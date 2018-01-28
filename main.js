@@ -13,7 +13,8 @@ $(document).on("pagebeforecreate", "#menu", function (event) {
  * Add Events (Menu Page)
  */
 $(document).on("pagecreate", "#menu", function (event) {
-    $(".navigate", "#menu").on("click", function () {
+    $(".navigate", "#menu").on("click", function (event) {
+        event.preventDefault();
         $.mobile.navigate( "#categoria", {
             menu: $(this).data("menu")
         });
