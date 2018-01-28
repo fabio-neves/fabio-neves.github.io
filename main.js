@@ -55,7 +55,7 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
 
         for (var k in menu["bebidas"].items) {
             $("#bebidas").append("<input type='radio' name='bebidas' id='bebidas"+k+"' value='' >");
-            $("#bebidas").append("<label for='bebidas"+k+"'>"+menu["bebida"].items[k].nome+"</label>");
+            $("#bebidas").append("<label for='bebidas"+k+"'>"+menu["bebidas"].items[k].nome+"</label>");
             $("#bebidas" + k).checkboxradio();
         }
         $("#bebidas").controlgroup("refresh");
