@@ -34,7 +34,16 @@ var menu = {
     },
     bebidas : { 
         label : "Bebidas",
-        items :[]
+        items :[{
+            nome:"bebida 1",
+            preco:1.99
+        },{
+            nome:"bebida 2",
+            preco:2.88
+        },{
+            nome:"bebida 3",
+            preco:3.77
+        }]
     },
     sobremesas : { 
         label : "Sobremesas",

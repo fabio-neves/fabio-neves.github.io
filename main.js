@@ -22,6 +22,8 @@ $(document).on("pagecreate", "#menu", function (event) {
 });
 
 $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
+    // TODO: Tirar a navegação do back e do forward button
+
     if ( data.toPage[0].id === "categoria" ) {
         $("#listaproduto").empty();
 
@@ -34,8 +36,7 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
             $("#listaproduto").listview('refresh');
         }
 
-        $(".navigate","#categoria").on("click", function () {
-            console.log('click');
+        $(".navigate", "#categoria").on("click", function () {
             $.mobile.pageContainer.pagecontainer("change", "#combo", {
                 categ: $(this).data("categ"),
                 combo: $(this).data("combo"),
@@ -43,13 +44,21 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
             });
         });
     }
-});
 
-$(document).on('pagebeforechange', function(event, data) {
-    if (typeof data.toPage == "string") {
-        console.log('user press back or foward button');
-        event.preventDefault();
-        event.stopPropagation();
+
+    if ( data.toPage[0].id === "combo" ) {
+        var categ = data.options.categ,
+            combo = data.options.combo;
+        
+        $("#bebidas").empty();
+        $("#acompanhamentos").empty();
+
+        for (var k in menu["bebida"].items) {
+            $("#bebidas").append("<input type='radio' name='bebidas' id='bebidas"+k+"' value='' >");
+            $("#bebidas").append("<label for='bebidas"+k+"'>"+menu["bebida"].items[k].nome+"</label>");
+            $("#bebidas" + k).checkboxradio();
+        }
+        $("#bebidas").controlgroup("refresh");
     }
 });
 
