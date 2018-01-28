@@ -45,7 +45,7 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
 });
 
 
-$( document ).on( "navigate", function( event, data ){
+$(window).on( "navigate", function( event, data ){
     console.log(data);
 });
 
