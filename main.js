@@ -51,14 +51,22 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
             combo = data.options.combo;
         
         $("#bebidas").empty();
-        $("#acompanhamentos").empty();
-
+        $("#bebidas").append("<label>Escolha sua bebida:</label>");
         for (var k in menu["bebidas"].items) {
             $("#bebidas").append("<input type='radio' name='bebidas' id='bebidas"+k+"' value='' >");
             $("#bebidas").append("<label for='bebidas"+k+"'>"+menu["bebidas"].items[k].nome+"</label>");
             $("#bebidas" + k).checkboxradio();
         }
         $("#bebidas").controlgroup("refresh");
+
+        $("#acompanhamentos").empty();
+        $("#acompanhamentos").append("<label>Escolha seu acompanhamento:</label>");
+        for (var k in menu["acompanhamentos"].items) {
+            $("#acompanhamentos").append("<input type='radio' name='acompanhamentos' id='acompanhamentos"+k+"' value='' >");
+            $("#acompanhamentos").append("<label for='acompanhamentos"+k+"'>"+menu["acompanhamentos"].items[k].nome+"</label>");
+            $("#acompanhamentos" + k).checkboxradio();
+        }
+        $("#bebidas").controlgroup("refresh");        
     }
 });
 
