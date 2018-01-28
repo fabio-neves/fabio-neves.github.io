@@ -13,9 +13,19 @@ $(document).on("pagebeforecreate", "#menu", function (event) {
  * Add Events (Menu Page)
  */
 $(document).on("pagecreate", "#menu", function (event) {
-    $(".navigate").on("click", function () {
+    $(".navigate", "#menu").on("click", function () {
         $.mobile.pageContainer.pagecontainer("change", "#categoria", {
             menu: $(this).data("menu"),
+            transition: "slide"
+        });
+    });
+});
+
+$(document).on("pagecreate", "#categoria", function (event) {
+    $(".navigate","#categoria").on("click", function () {
+        $.mobile.pageContainer.pagecontainer("change", "#combo", {
+            categ: $(this).data("categ"),
+            combo: $(this).data("combo"),
             transition: "slide"
         });
     });
@@ -25,10 +35,10 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
     if ( data.toPage[0].id === "categoria" ) {
         $("#listaproduto").empty();
 
-        var menuLabel = data.options.menu;
-        if (menuLabel != null && menuLabel != "" && menu[menuLabel] && menu[menuLabel].items) {
-            for (var k in menu[menuLabel].items) {
-                $("#listaproduto").append("<li class='navigate' data-preco='"+menu[menuLabel].items[k].preco+"'>"+ menu[menuLabel].items[k].nome + "</li>");
+        var categ = data.options.menu;
+        if (categ != null && categ != "" && menu[categ] && menu[categ].items) {
+            for (var k in menu[categ].items) {
+                $("#listaproduto").append("<li class='navigate' data-categ='"+categ+"' data-combo='"+k+"'>"+ menu[categ].items[k].nome + "</li>");
             }
             $("#listaproduto").listview('refresh');
         }
