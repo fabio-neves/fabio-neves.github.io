@@ -46,8 +46,10 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
 });
 
 $(window).on("navigate", function(event,data){
-    console.log('user press back or foward button');
-    data.toPage = "menu"; 
+    if (typeof data.toPage == "string") {
+        console.log('user press back or foward button');
+        data.toPage = "#menu"; 
+    }
 });
 
 $(document).on("pagebeforeshow", "#view", function (event) {      
