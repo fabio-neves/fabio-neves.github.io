@@ -5,7 +5,7 @@ var pedido = new Array();
  */
 $(document).on("pagebeforecreate", "#menu", function (event) { 
     for (var k in menu) {
-        $("#mainmenu").append("<li class='navigate' data-menu='"+k+"'>"+ menu[k].label + "</li>");
+        $("#mainmenu").append("<li class='navigate' data-categ='"+k+"'>"+ menu[k].label + "</li>");
     }    
 });
 
@@ -14,14 +14,10 @@ $(document).on("pagebeforecreate", "#menu", function (event) {
  */
 $(document).on("pagecreate", "#menu", function (event) {
     $(".navigate", "#menu").on("click", function (event) {
-        event.preventDefault();
-        $.mobile.navigate( "#categoria", {
-            menu: $(this).data("menu")
+        $.mobile.pageContainer.pagecontainer("change", "#categoria", {
+            categ: $(this).data("categ"),
+            transition: "slide"
         });
-        // $.mobile.pageContainer.pagecontainer("change", "#categoria", {
-        //     menu: $(this).data("menu"),
-        //     transition: "slide"
-        // });
     });
 });
 
@@ -29,11 +25,12 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
     if ( data.toPage[0].id === "categoria" ) {
         $("#listaproduto").empty();
 
-        var categ = data.options.menu;
+        var categ = data.options.categ;
         if (categ != null && categ != "" && menu[categ] && menu[categ].items) {
             for (var k in menu[categ].items) {
-                $("#listaproduto").append("<li class='navigate' data-categ='"+categ+"' data-combo='"+k+"'>"+ menu[categ].items[k].nome + "</li>");
+                $("#listaproduto").append("<li class='navigate' data-categ='" + categ + "' data-combo='" + k + "'>"+ menu[categ].items[k].nome + "</li>");
             }
+
             $("#listaproduto").listview('refresh');
         }
 
@@ -48,13 +45,9 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
     }
 });
 
-
 $(window).on( "navigate", function( event, data ){
-    console.log(data);
-    console.log(event);
+        data.toPage = "#menu"; 
 });
-
-
 
 $(document).on("pagebeforeshow", "#view", function (event) {      
     $("#pedido-list").empty();
