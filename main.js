@@ -24,6 +24,7 @@ $(document).on("pagecreate", "#menu", function (event) {
 $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
     if ( data.toPage[0].id === "categoria" ) {
         var menuLabel = data.options.menu;
+        $("#listaproduto").empty();
         for (var k in menu[menuLabel].items) {
             $("#listaproduto").append("<li class='navigate' data-preco='"+menu[menuLabel].items[k].preco+"'>"+ menu[menuLabel].items[k].nome + "</li>");
         }
