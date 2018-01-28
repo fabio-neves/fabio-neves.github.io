@@ -21,16 +21,6 @@ $(document).on("pagecreate", "#menu", function (event) {
     });
 });
 
-$(document).on("pagecreate", "#categoria", function (event) {
-    $(".navigate","#categoria").on("click", function () {
-        $.mobile.pageContainer.pagecontainer("change", "#combo", {
-            categ: $(this).data("categ"),
-            combo: $(this).data("combo"),
-            transition: "slide"
-        });
-    });
-});
-
 $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
     if ( data.toPage[0].id === "categoria" ) {
         $("#listaproduto").empty();
@@ -42,6 +32,15 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
             }
             $("#listaproduto").listview('refresh');
         }
+
+        $(".navigate","#categoria").on("click", function () {
+            console.log('click');
+            $.mobile.pageContainer.pagecontainer("change", "#combo", {
+                categ: $(this).data("categ"),
+                combo: $(this).data("combo"),
+                transition: "slide"
+            });
+        });
     }
 });
 
