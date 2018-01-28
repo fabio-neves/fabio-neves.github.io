@@ -4,7 +4,6 @@ var pedido = new Array();
  * Build Menu Page
  */
 $(document).on("pagebeforecreate", "#menu", function (event) { 
-    console.log("[Menu] pagebeforecreate");
     for (var k in menu) {
         $("#mainmenu").append("<li class='navigate' data-menu='"+k+"'>"+ menu[k].label + "</li>");
     }    
@@ -12,8 +11,10 @@ $(document).on("pagebeforecreate", "#menu", function (event) {
 
 $( document ).on( "pagebeforechange" , function ( event, data ) {
     if ( data.toPage[0].id == "view" ) {
-        var menu = data.options.menu;
-        console.log(menu);
+        var menuList = data.options.menu;
+        for (var k in menuList[menu].items) {
+            console.log(menuList[menu].items[k].nome);
+        }
     }
 });
 
