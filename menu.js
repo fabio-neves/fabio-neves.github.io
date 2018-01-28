@@ -45,6 +45,19 @@ var menu = {
             preco:3.77
         }]
     },
+    acompanhamentos : { 
+        label : "Acompanhamentos",
+        items :[{
+            nome:"batata 1",
+            preco:2.99
+        },{
+            nome:"cenoura 2",
+            preco:3.88
+        },{
+            nome:"jaca 3",
+            preco:1.77
+        }]
+    },
     sobremesas : { 
         label : "Sobremesas",
         items :[]
