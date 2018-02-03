@@ -21,6 +21,12 @@ $(document).on("pagecreate", "#menu", function (event) {
     });
 });
 
+$(document).on("pagecreate", "#combo", function (event) {
+    $("#addOrderBtn", "#combo").on("click", function (event) {
+        console.log("Adc. Pedido");
+    });
+});
+
 $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
     // TODO: Tirar a navegação do back e do forward button
 
