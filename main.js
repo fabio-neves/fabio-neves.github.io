@@ -32,7 +32,11 @@ $(document).on("pagecreate", "#combo", function (event) {
             pedido.push({
                 "nome": $("#bebidas :radio:checked").data("name"),
                 "preco":0
-            });            
+            });
+            pedido.push({
+                "nome": $("#acompanhamentos :radio:checked").data("name"),
+                "preco":0
+            });                        
             $.mobile.pageContainer.pagecontainer("change", "#pedido", {
                 transition: "slide"
             });
@@ -87,7 +91,7 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
         $("#acompanhamentos").empty();
         $("#acompanhamentos").append("<label>Escolha seu acompanhamento:</label>");
         for (var k in menu["acompanhamentos"].items) {
-            $("#acompanhamentos").append("<input type='radio' name='acompanhamentos' id='acompanhamentos"+k+"' value='' data-name='"+menu["bebidas"].items[k].nome+"' data-price='"+menu["bebidas"].items[k].preco+"'>");
+            $("#acompanhamentos").append("<input type='radio' name='acompanhamentos' id='acompanhamentos"+k+"' value='' data-name='"+menu["acompanhamentos"].items[k].nome+"' data-price='"+menu["acompanhamentos"].items[k].preco+"'>");
             $("#acompanhamentos").append("<label for='acompanhamentos"+k+"'>"+menu["acompanhamentos"].items[k].nome+"</label>");
             $("#acompanhamentos" + k).checkboxradio();
         }
@@ -96,19 +100,19 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
 });
 
 $(document).on("pagebeforeshow", "#pedido", function (event) {      
-    $("#pedidoTbl tr").remove();
+    $("#pedidotbl tr").remove();
     $('#meupedido').attr("href", "whatsapp://send?text=");    
 
     $.each(pedido, function(idx) {        
-        $("#pedidoTbl tbody").append("<tr>")
+        $("#pedidotbl tbody").append("<tr>")
             .append("<th>"+pedido[idx].nome+"</th>")
             .append("<th>"+pedido[idx].preco+"</th>")
             .append("</tr>");
         var _href = $('#meupedido').attr("href");
-        $('#meupedido').attr("href", _href + "Nome: "+ pedido[idx].nome +" Preco"+ pedido[idx].preco + "%0A");
+        $('#meupedido').attr("href", _href + "Nome: "+ pedido[idx].nome +" Preco: "+ pedido[idx].preco + "%0A");
     });
 
-    $("#pedidoTbl").table('refresh');
+    $("#pedidotbl").table('refresh');
 });
 
 $(document).on("pagecreate", "#list", function (event) {
