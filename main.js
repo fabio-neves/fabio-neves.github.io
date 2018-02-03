@@ -23,14 +23,18 @@ $(document).on("pagecreate", "#menu", function (event) {
 
 $(document).on("pagecreate", "#combo", function (event) {
     $("#addOrderBtn", "#combo").on("click", function (event) {
-        var bebidanome = $("#bebidas :radio:checked").data("name");
-        var bebidapreco = $("#bebidas :radio:checked").data("price");
+        if ($("#bebidas :radio:checked").length > 0 && $("#acompanhamentos :radio:checked").length) {
+            var bebidanome = $("#bebidas :radio:checked").data("name");
+            var bebidapreco = $("#bebidas :radio:checked").data("price");
 
-        var combonome = $("#comboVal").data("name");
-        var combopreco = $("#comboVal").data("price");
-        
-        console.log("Adc. Pedido: Nome combo: " + combonome + " Preço:" + combopreco);
-        console.log("Adc. Pedido: Nome bebida: " + bebidanome + " Preço:" + bebidapreco);
+            var combonome = $("#comboVal").data("name");
+            var combopreco = $("#comboVal").data("price");
+            
+            console.log("Adc. Pedido: Nome combo: " + combonome + " Preço:" + combopreco);
+            console.log("Adc. Pedido: Nome bebida: " + bebidanome + " Preço:" + bebidapreco);
+        } else {
+            console.log("Escolha um acompanhamento e uma bebida");
+        }
 
     });
 });
