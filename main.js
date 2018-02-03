@@ -25,7 +25,11 @@ $(document).on("pagecreate", "#combo", function (event) {
     $("#addOrderBtn", "#combo").on("click", function (event) {
         var bebidanome = $("#bebidas :radio:checked").data("name");
         var bebidapreco = $("#bebidas :radio:checked").data("price");
+
+        var combonome = $("#comboVal").data("name");
+        var combopreco = $("#comboVal").data("price");
         
+        console.log("Adc. Pedido: Nome combo: " + combonome + " Preço:" + combopreco);
         console.log("Adc. Pedido: Nome bebida: " + bebidanome + " Preço:" + bebidapreco);
 
     });
@@ -59,6 +63,9 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
     if ( data.toPage[0].id === "combo" ) {
         var categ = data.options.categ,
             combo = data.options.combo;
+
+        $("#comboVal").data("name", menu["combos"].items[combo].nome);
+        $("#comboVal").data("price", menu["combos"].items[combo].preco);
         
         $("#bebidas").empty();
         $("#bebidas").append("<label>Escolha sua bebida:</label>");
@@ -76,7 +83,7 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
             $("#acompanhamentos").append("<label for='acompanhamentos"+k+"'>"+menu["acompanhamentos"].items[k].nome+"</label>");
             $("#acompanhamentos" + k).checkboxradio();
         }
-        $("#bebidas").controlgroup("refresh");        
+        $("#acompanhamentos").controlgroup("refresh");        
     }
 });
 
