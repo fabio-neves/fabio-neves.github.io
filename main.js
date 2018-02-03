@@ -96,7 +96,7 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
 });
 
 $(document).on("pagebeforeshow", "#pedido", function (event) {      
-    $("#pedido-list").empty();
+    $("#pedidoTbl tr").remove();
     $('#meupedido').attr("href", "whatsapp://send?text=");    
 
     $.each(pedido, function(idx) {        
