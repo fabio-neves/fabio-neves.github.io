@@ -23,8 +23,8 @@ $(document).on("pagecreate", "#menu", function (event) {
 
 $(document).on("pagecreate", "#combo", function (event) {
     $("#addOrderBtn", "#combo").on("click", function (event) {
-        var bebidanome = $("#bebidas :radio:checked").data("nome");
-        var bebidapreco = $("#bebidas :radio:checked").data("preco");
+        var bebidanome = $("#bebidas :radio:checked").data("name");
+        var bebidapreco = $("#bebidas :radio:checked").data("price");
         
         console.log("Adc. Pedido: Nome bebida: " + bebidanome + " Preço:" + bebidapreco);
 
