@@ -105,8 +105,7 @@ $(document).on("pagebeforeshow", "#pedido", function (event) {
 
     $.each(pedido, function(idx) {        
         $("#pedidotbl tbody")
-            .append("<tr><td>"+pedido[idx].nome+"</td>")
-            .append("<td>"+pedido[idx].preco+"</td></tr>");
+            .append("<tr><td>"+pedido[idx].nome+"</td><td>"+pedido[idx].preco+"</td></tr>");
         var _href = $('#meupedido').attr("href");
         $('#meupedido').attr("href", _href + "Nome: "+ pedido[idx].nome +" Preco: "+ pedido[idx].preco + "%0A");
     });
