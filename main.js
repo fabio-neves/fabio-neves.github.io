@@ -110,7 +110,7 @@ $(document).on("pagebeforeshow", "#pedido", function (event) {
         $('#meupedido').attr("href", _href + "Nome: "+ pedido[idx].nome +" Preco: "+ pedido[idx].preco + "%0A");
     });
 
-    $("#pedidotbl").table('refresh');
+    $("#pedidotbl").trigger('create');
 });
 
 $(document).on("pagecreate", "#list", function (event) {
