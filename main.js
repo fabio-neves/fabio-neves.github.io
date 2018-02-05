@@ -101,14 +101,19 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
 
 $(document).on("pagebeforeshow", "#pedido", function (event) {      
     $("#pedidotbl tr").remove();
-    $('#meupedido').attr("href", "whatsapp://send?text=");    
+    $('#meupedido').attr("href", "whatsapp://send?text=");
+    
+    var sum = 0;
 
     $.each(pedido, function(idx) {        
         $("#pedidotbl tbody")
             .append("<tr><td>"+pedido[idx].nome+"</td><td>"+pedido[idx].preco+"</td></tr>");
+        sum = sum + pedido[idx].preco;
         var _href = $('#meupedido').attr("href");
         $('#meupedido').attr("href", _href + "Nome: "+ pedido[idx].nome +" Preco: "+ pedido[idx].preco + "%0A");
     });
+
+    $("#pedidotbl tfoot").append("<tr><td> Total: "+sum+"<tr><td>");
 
     $("#pedidotbl").trigger('create');
 });
