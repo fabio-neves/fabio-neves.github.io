@@ -1,5 +1,16 @@
 var pedido = new Array();
 
+function fillProducts(elemFieldset, categ) {
+    $(elemFieldset).empty();
+    $(elemFieldset).append("<label>"+menu[categ].Label+"</label>");
+    for (var k in menu[categ].items) {
+        $(elemFieldset).append("<input type='radio' name='"+cat+"' id='"+cat+k+"' value='' data-name='"+menu[categ].items[k].nome+"' data-price='"+menu[categ].items[k].preco+"' >");
+        $(elemFieldset).append("<label for='"+cat+k+"'>"+menu[categ].items[k].nome+"</label>");
+        $(elemFieldset + k).checkboxradio();
+    }
+    $(elemFieldset).controlgroup("refresh");
+}
+
 function goToMenu() {
     $.mobile.pageContainer.pagecontainer("change", "#menu");
 }
@@ -52,33 +63,46 @@ $(document).on("pagecreate", "#combo", function (event) {
     });
 });
 
-$( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
-    // TODO: Tirar a navegação do back e do forward button
+function handleListProductPage(event, data) {
+    var categ = data.options.categ;
+    fillProducts("#listProduct", categ);
+}
+
+function handleListComboPage(event, data) {
     $("#listComboListView").empty();
+        
+    var categ = data.options.categ;
+    
+    if (categ != null && categ != "" && menu[categ] && menu[categ].items) {
+        for (var k in menu[categ].items) {
+            $("#listComboListView").append("<li class='navigate' data-categ='" + categ + "' data-combo='" + k + "'>"+ menu[categ].items[k].nome + "</li>");
+        }
+
+        $("#listComboListView").listview('refresh');
+    
+
+        $(".navigate", "#listComboPage").on("click", function () {
+            $.mobile.pageContainer.pagecontainer("change", "#combo", {
+                categ: $(this).data("categ"),
+                combo: $(this).data("combo"),
+                transition: "slide"
+            });
+        });
+    } else {
+        goToMenu();
+    }
+}
+
+$( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
+    // TODO: Tirar a navegação do back e do forward button    
 
     if ( data.toPage[0].id === "listComboPage" ) {
-        var categ = data.options.categ;
-        
-        if (categ != null && categ != "" && menu[categ] && menu[categ].items) {
-            for (var k in menu[categ].items) {
-                $("#listComboListView").append("<li class='navigate' data-categ='" + categ + "' data-combo='" + k + "'>"+ menu[categ].items[k].nome + "</li>");
-            }
-
-            $("#listComboListView").listview('refresh');
-        
-
-            $(".navigate", "#listComboPage").on("click", function () {
-                $.mobile.pageContainer.pagecontainer("change", "#combo", {
-                    categ: $(this).data("categ"),
-                    combo: $(this).data("combo"),
-                    transition: "slide"
-                });
-            });
-        } else {
-            goToMenu();
-        }
+        handleListComboPage(event, data);
     }
 
+    if ( data.toPage[0].id === "listProductPage" ) {
+        handleListProductPage(event, data);
+    }    
 
     if ( data.toPage[0].id === "combo" ) {
         var categ = data.options.categ,
