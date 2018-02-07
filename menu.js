@@ -1,5 +1,6 @@
 var menu = {
     combos : { 
+        page  : "listComboPage",
         label : "Hare Combos",
         items :[
             {
@@ -17,22 +18,27 @@ var menu = {
         ]
     },
     pratos : { 
+        page  : "menu",
         label : "Monte seu prato",
         items :[]
     },
     petiscos : { 
+        page  : "listProductPage",
         label : "Petiscos",
         items :[]
     },
     saladas : { 
+        page  : "listProductPage",
         label : "Saladas",
         items :[]
     },
     sopas : { 
+        page  : "listProductPage",
         label : "Sopas",
         items :[]
     },
     bebidas : { 
+        page  : "listProductPage",
         label : "Bebidas",
         items :[{
             nome:"bebida 1",
@@ -46,6 +52,7 @@ var menu = {
         }]
     },
     acompanhamentos : { 
+        page  : "listProductPage",
         label : "Acompanhamentos",
         items :[{
             nome:"batata 1",
@@ -59,6 +66,7 @@ var menu = {
         }]
     },
     sobremesas : { 
+        page  : "listProductPage",
         label : "Sobremesas",
         items :[]
     }

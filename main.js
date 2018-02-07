@@ -1,11 +1,15 @@
 var pedido = new Array();
 
+function goToMenu() {
+    $.mobile.pageContainer.pagecontainer("change", "#menu");
+}
+
 /**
  * Build Menu Page
  */
 $(document).on("pagebeforecreate", "#menu", function (event) { 
     for (var k in menu) {
-        $("#mainmenu").append("<li class='navigate' data-categ='"+k+"'>"+ menu[k].label + "</li>");
+        $("#mainmenu").append("<li class='navigate' data-categ='"+k+"' data-page='"+menu[k].page+"'>"+ menu[k].label + "</li>");
     }    
 });
 
@@ -14,7 +18,7 @@ $(document).on("pagebeforecreate", "#menu", function (event) {
  */
 $(document).on("pagecreate", "#menu", function (event) {
     $(".navigate", "#menu").on("click", function (event) {
-        $.mobile.pageContainer.pagecontainer("change", "#categoria", {
+        $.mobile.pageContainer.pagecontainer("change", $(this).data("page"), {
             categ: $(this).data("categ"),
             transition: "slide"
         });
@@ -50,26 +54,29 @@ $(document).on("pagecreate", "#combo", function (event) {
 
 $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
     // TODO: Tirar a navegação do back e do forward button
+    $("#listComboListView").empty();
 
-    if ( data.toPage[0].id === "categoria" ) {
-        $("#listaproduto").empty();
-
+    if ( data.toPage[0].id === "listComboPage" ) {
         var categ = data.options.categ;
+        
         if (categ != null && categ != "" && menu[categ] && menu[categ].items) {
             for (var k in menu[categ].items) {
-                $("#listaproduto").append("<li class='navigate' data-categ='" + categ + "' data-combo='" + k + "'>"+ menu[categ].items[k].nome + "</li>");
+                $("#listComboListView").append("<li class='navigate' data-categ='" + categ + "' data-combo='" + k + "'>"+ menu[categ].items[k].nome + "</li>");
             }
 
-            $("#listaproduto").listview('refresh');
-        }
+            $("#listComboListView").listview('refresh');
+        
 
-        $(".navigate", "#categoria").on("click", function () {
-            $.mobile.pageContainer.pagecontainer("change", "#combo", {
-                categ: $(this).data("categ"),
-                combo: $(this).data("combo"),
-                transition: "slide"
+            $(".navigate", "#listComboPage").on("click", function () {
+                $.mobile.pageContainer.pagecontainer("change", "#combo", {
+                    categ: $(this).data("categ"),
+                    combo: $(this).data("combo"),
+                    transition: "slide"
+                });
             });
-        });
+        } else {
+            goToMenu();
+        }
     }
 
 
