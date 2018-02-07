@@ -46,7 +46,7 @@ $(document).on("pagecreate", "#menu", function (event) {
 
 $(document).on("pagecreate", "#listProductPage", function (event) {
     $("#addOrderBtn", "#listProductPage").on("click", function (event) {
-        if ($("#listProduct :radio:checked").length >) {
+        if ($("#listProduct :radio:checked").length > 0) {
             pedido.push({
                 "nome"  : $("#listProduct :radio:checked").data("name"),
                 "preco" : $("#listProduct :radio:checked").data("price")
