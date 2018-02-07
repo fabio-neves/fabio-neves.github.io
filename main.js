@@ -2,11 +2,11 @@ var pedido = new Array();
 
 function fillProducts(elemFieldset, categ) {
     $(elemFieldset).empty();
-    $(elemFieldset).append("<label>"+menu[categ].Label+"</label>");
+    $(elemFieldset).append("<label>"+menu[categ].label+"</label>");
     for (var k in menu[categ].items) {
-        $(elemFieldset).append("<input type='radio' name='"+categ+"' id='"+categ+k+"' value='' data-name='"+menu[categ].items[k].nome+"' data-price='"+menu[categ].items[k].preco+"' >");
+        $(elemFieldset).append("<input type='radio' name='"+categ"' id='"+categ+k+"' value='' data-name='"+menu[categ].items[k].nome+"' data-price='"+menu[categ].items[k].preco+"' >");
         $(elemFieldset).append("<label for='"+categ+k+"'>"+menu[categ].items[k].nome+"</label>");
-        $(elemFieldset + k).checkboxradio();
+        $("#" + categ + k).checkboxradio();
     }
     $(elemFieldset).controlgroup("refresh");
 }
