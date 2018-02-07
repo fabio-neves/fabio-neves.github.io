@@ -54,7 +54,7 @@ $(document).on("pagecreate", "#listProductPage", function (event) {
             goToOrderPage();
         }
     });
-}
+});
 
 $(document).on("pagecreate", "#combo", function (event) {
     $("#addOrderBtn", "#combo").on("click", function (event) {
