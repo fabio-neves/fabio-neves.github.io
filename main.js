@@ -42,6 +42,7 @@ $(document).on("pagecreate", "#combo", function (event) {
             });
         } else {
             console.log("Escolha um acompanhamento e uma bebida");
+            $("#popupChoose").popup("open");
         }
 
     });
