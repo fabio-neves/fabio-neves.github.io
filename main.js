@@ -129,23 +129,23 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
         $("#comboVal").data("name", menu["combos"].items[combo].nome);
         $("#comboVal").data("price", menu["combos"].items[combo].preco);
         
-        $("#bebidas").empty();
-        $("#bebidas").append("<label>Escolha sua bebida:</label>");
+        $("#combobebidas").empty();
+        $("#combobebidas").append("<label>Escolha sua bebida:</label>");
         for (var k in menu["bebidas"].items) {
-            $("#bebidas").append("<input type='radio' name='bebidas' id='bebidas"+k+"' value='' data-name='"+menu["bebidas"].items[k].nome+"' data-price='"+menu["bebidas"].items[k].preco+"' >");
+            $("#bebidas").append("<input type='radio' name='bebidas' id='combobebidas"+k+"' value='' data-name='"+menu["bebidas"].items[k].nome+"' data-price='"+menu["bebidas"].items[k].preco+"' >");
             $("#bebidas").append("<label for='bebidas"+k+"'>"+menu["bebidas"].items[k].nome+"</label>");
-            $("#bebidas" + k).checkboxradio();
+            $("#combobebidas" + k).checkboxradio();
         }
-        $("#bebidas").controlgroup("refresh");
+        $("#combobebidas").controlgroup("refresh");
 
-        $("#acompanhamentos").empty();
-        $("#acompanhamentos").append("<label>Escolha seu acompanhamento:</label>");
+        $("#comboacompanhamentos").empty();
+        $("#comboacompanhamentos").append("<label>Escolha seu acompanhamento:</label>");
         for (var k in menu["acompanhamentos"].items) {
-            $("#acompanhamentos").append("<input type='radio' name='acompanhamentos' id='comboacompanhamentos"+k+"' value='' data-name='"+menu["acompanhamentos"].items[k].nome+"' data-price='"+menu["acompanhamentos"].items[k].preco+"'>");
-            $("#acompanhamentos").append("<label for='acompanhamentos"+k+"'>"+menu["acompanhamentos"].items[k].nome+"</label>");
+            $("#comboacompanhamentos").append("<input type='radio' name='acompanhamentos' id='comboacompanhamentos"+k+"' value='' data-name='"+menu["acompanhamentos"].items[k].nome+"' data-price='"+menu["acompanhamentos"].items[k].preco+"'>");
+            $("#comboacompanhamentos").append("<label for='acompanhamentos"+k+"'>"+menu["acompanhamentos"].items[k].nome+"</label>");
             $("#comboacompanhamentos" + k).checkboxradio();
         }
-        $("#acompanhamentos").controlgroup("refresh");        
+        $("#comboacompanhamentos").controlgroup("refresh");        
     }
 });
 
