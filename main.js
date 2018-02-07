@@ -58,18 +58,18 @@ $(document).on("pagecreate", "#listProductPage", function (event) {
 
 $(document).on("pagecreate", "#combo", function (event) {
     $("#addOrderBtn", "#combo").on("click", function (event) {
-        if ($("#bebidas :radio:checked").length > 0 && $("#acompanhamentos :radio:checked").length) {
+        if ($("#combobebidas :radio:checked").length > 0 && $("#comboacompanhamentos :radio:checked").length) {
 
             pedido.push({
                 "nome": $("#comboVal").data("name"),
                 "preco":$("#comboVal").data("price")
             });
             pedido.push({
-                "nome": $("#bebidas :radio:checked").data("name"),
+                "nome": $("#combobebidas :radio:checked").data("name"),
                 "preco":0
             });
             pedido.push({
-                "nome": $("#acompanhamentos :radio:checked").data("name"),
+                "nome": $("#comboacompanhamentos :radio:checked").data("name"),
                 "preco":0
             });
             goToOrderPage();
