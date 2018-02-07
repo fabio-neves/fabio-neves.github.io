@@ -12,7 +12,15 @@ function fillProducts(elemFieldset, categ) {
 }
 
 function goToMenu() {
-    $.mobile.pageContainer.pagecontainer("change", "#menu");
+    $.mobile.pageContainer.pagecontainer("change", "#menu", {
+        transition: "slide"
+    });
+}
+
+function goToOrderPage() {
+    $.mobile.pageContainer.pagecontainer("change", "#pedido", {
+        transition: "slide"
+    });
 }
 
 /**
@@ -36,6 +44,18 @@ $(document).on("pagecreate", "#menu", function (event) {
     });
 });
 
+$(document).on("pagecreate", "#listProductPage", function (event) {
+    $("#addOrderBtn", "#listProductPage").on("click", function (event) {
+        if ($("#listProduct :radio:checked").length >) {
+            pedido.push({
+                "nome"  : $("#listProduct :radio:checked").data("name"),
+                "preco" : $("#listProduct :radio:checked").data("price")
+            });
+            goToOrderPage();
+        }
+    }
+}
+
 $(document).on("pagecreate", "#combo", function (event) {
     $("#addOrderBtn", "#combo").on("click", function (event) {
         if ($("#bebidas :radio:checked").length > 0 && $("#acompanhamentos :radio:checked").length) {
@@ -51,10 +71,8 @@ $(document).on("pagecreate", "#combo", function (event) {
             pedido.push({
                 "nome": $("#acompanhamentos :radio:checked").data("name"),
                 "preco":0
-            });                        
-            $.mobile.pageContainer.pagecontainer("change", "#pedido", {
-                transition: "slide"
             });
+            goToOrderPage();
         } else {
             console.log("Escolha um acompanhamento e uma bebida");
             $("#popupChoose").popup("open");
