@@ -141,9 +141,9 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
         $("#acompanhamentos").empty();
         $("#acompanhamentos").append("<label>Escolha seu acompanhamento:</label>");
         for (var k in menu["acompanhamentos"].items) {
-            $("#acompanhamentos").append("<input type='radio' name='acompanhamentos' id='acompanhamentos"+k+"' value='' data-name='"+menu["acompanhamentos"].items[k].nome+"' data-price='"+menu["acompanhamentos"].items[k].preco+"'>");
+            $("#acompanhamentos").append("<input type='radio' name='acompanhamentos' id='comboacompanhamentos"+k+"' value='' data-name='"+menu["acompanhamentos"].items[k].nome+"' data-price='"+menu["acompanhamentos"].items[k].preco+"'>");
             $("#acompanhamentos").append("<label for='acompanhamentos"+k+"'>"+menu["acompanhamentos"].items[k].nome+"</label>");
-            $("#acompanhamentos" + k).checkboxradio();
+            $("#comboacompanhamentos" + k).checkboxradio();
         }
         $("#acompanhamentos").controlgroup("refresh");        
     }
