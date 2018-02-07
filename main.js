@@ -151,7 +151,7 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
 
 $(document).on("pagebeforeshow", "#pedido", function (event) {      
     $("#pedidotbl tr").remove();
-    $('#meupedido').attr("href", "whatsapp://send?text=");
+    $('#enviar').attr("href", "whatsapp://send?text=");
     
     var sum = 0;
 
@@ -159,8 +159,8 @@ $(document).on("pagebeforeshow", "#pedido", function (event) {
         $("#pedidotbl tbody")
             .append("<tr><td>"+pedido[idx].nome+"</td><td>"+pedido[idx].preco+"</td></tr>");
         sum = sum + pedido[idx].preco;
-        var _href = $('#meupedido').attr("href");
-        $('#meupedido').attr("href", _href + "Nome: "+ pedido[idx].nome +" Preco: "+ pedido[idx].preco + "%0A");
+        var _href = $('#enviar').attr("href");
+        $('#enviar').attr("href", _href + "Nome: "+ pedido[idx].nome +" Preco: "+ pedido[idx].preco + "%0A");
     });
 
     $("#pedidotbl tfoot").append("<tr><td> Total: "+sum+"<tr><td>");
