@@ -28,7 +28,7 @@ function goToOrderPage() {
  */
 $(document).on("pagebeforecreate", "#menu", function (event) { 
     for (var k in menu) {
-        $("#mainmenu").append("<li class='navigate' data-categ='"+k+"' data-page='"+menu[k].page+"'>"+ menu[k].label + "</li>");
+        $("#mainmenu").append("<li class='navigate' data-categ='"+k+"' data-page='"+menu[k].page+"'><a href='#'>"+ menu[k].label + "</a></li>");
     }    
 });
 
@@ -93,7 +93,7 @@ function handleListComboPage(event, data) {
     
     if (categ != null && categ != "" && menu[categ] && menu[categ].items) {
         for (var k in menu[categ].items) {
-            $("#listComboListView").append("<li class='navigate' data-categ='" + categ + "' data-combo='" + k + "'>"+ menu[categ].items[k].nome + "<p class='ui-li-aside'>"+menu[categ].items[k].preco+"</p></li>");
+            $("#listComboListView").append("<li class='navigate' data-categ='" + categ + "' data-combo='" + k + "'><a href='#'>"+ menu[categ].items[k].nome + "<p class='ui-li-aside'>"+menu[categ].items[k].preco+"</p></a></li>");
         }
 
         $("#listComboListView").listview('refresh');
