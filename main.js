@@ -5,7 +5,7 @@ function fillProducts(elemFieldset, categ) {
     $(elemFieldset).append("<label>"+menu[categ].label+"</label>");
     for (var k in menu[categ].items) {
         $(elemFieldset).append("<input type='radio' name='"+categ+"' id='"+categ+k+"' value='' data-name='"+menu[categ].items[k].nome+"' data-price='"+menu[categ].items[k].preco+"' >");
-        $(elemFieldset).append("<label for='"+categ+k+"'>"+menu[categ].items[k].nome+"</label>");
+        $(elemFieldset).append("<label for='"+categ+k+"'>"+menu[categ].items[k].nome+"<span style='float:right;font-weight:400'>R$"+menu[categ].items[k].preco+"</span></label>");
         $("#" + categ + k).checkboxradio();
     }
     $(elemFieldset).controlgroup("refresh");
@@ -133,7 +133,7 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
         $("#combobebidas").append("<label>Escolha sua bebida:</label>");
         for (var k in menu["bebidas"].items) {
             $("#combobebidas").append("<input type='radio' name='bebidas' id='combobebidas"+k+"' value='' data-name='"+menu["bebidas"].items[k].nome+"' data-price='"+menu["bebidas"].items[k].preco+"' >");
-            $("#combobebidas").append("<label for='combobebidas"+k+"'>"+menu["bebidas"].items[k].nome+"<span style='float:right;font-weight:400'>R$"+menu["bebidas"].items[k].preco+"</span></label>");
+            $("#combobebidas").append("<label for='combobebidas"+k+"'>"+menu["bebidas"].items[k].nome+"</label>");
             $("#combobebidas" + k).checkboxradio();
         }
         $("#combobebidas").controlgroup("refresh");
@@ -142,7 +142,7 @@ $( document ).on( "pagecontainerbeforechange" , function ( event, data ) {
         $("#comboacompanhamentos").append("<label>Escolha seu acompanhamento:</label>");
         for (var k in menu["acompanhamentos"].items) {
             $("#comboacompanhamentos").append("<input type='radio' name='acompanhamentos' id='comboacompanhamentos"+k+"' value='' data-name='"+menu["acompanhamentos"].items[k].nome+"' data-price='"+menu["acompanhamentos"].items[k].preco+"'>");
-            $("#comboacompanhamentos").append("<label for='comboacompanhamentos"+k+"'>"+menu["acompanhamentos"].items[k].nome+"<span style='float:right;font-weight:400'> R$"+menu["bebidas"].items[k].preco+"</span></label>");
+            $("#comboacompanhamentos").append("<label for='comboacompanhamentos"+k+"'>"+menu["acompanhamentos"].items[k].nome+"</label>");
             $("#comboacompanhamentos" + k).checkboxradio();
         }
         $("#comboacompanhamentos").controlgroup("refresh");        
