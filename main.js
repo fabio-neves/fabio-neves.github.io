@@ -93,7 +93,7 @@ function handleListComboPage(event, data) {
     
     if (categ != null && categ != "" && menu[categ] && menu[categ].items) {
         for (var k in menu[categ].items) {
-            $("#listComboListView").append("<li class='navigate' data-categ='" + categ + "' data-combo='" + k + "'><a href='#'>"+ menu[categ].items[k].nome + "<p class='ui-li-aside'>"+menu[categ].items[k].preco+"</p></a></li>");
+            $("#listComboListView").append("<li class='navigate' data-categ='" + categ + "' data-combo='" + k + "'><a href='#'>"+ menu[categ].items[k].nome + "<p class='ui-li-aside'> R$ "+menu[categ].items[k].preco.toFixed(2)+"</p></a></li>");
         }
 
         $("#listComboListView").listview('refresh');
