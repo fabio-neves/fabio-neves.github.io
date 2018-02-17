@@ -45,7 +45,7 @@ $(document).on("pagecreate", "#menu", function (event) {
 });
 
 $(document).on("pagecreate", "#listProductPage", function (event) {
-    $("#addOrderBtn", "#listProductPage").on("click", function (event) {
+    $("#lppAddToOrderBtn").on("click", function (event) {
         if ($("#listProduct :radio:checked").length > 0) {
             pedido.push({
                 "nome"  : $("#listProduct :radio:checked").data("name"),
@@ -57,7 +57,7 @@ $(document).on("pagecreate", "#listProductPage", function (event) {
 });
 
 $(document).on("pagecreate", "#combo", function (event) {
-    $("#addOrderBtn", "#combo").on("click", function (event) {
+    $("#cAddOrderBtn").on("click", function (event) {
         if ($("#combobebidas :radio:checked").length > 0 && $("#comboacompanhamentos :radio:checked").length) {
 
             pedido.push({
