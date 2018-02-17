@@ -157,13 +157,13 @@ $(document).on("pagebeforeshow", "#pedido", function (event) {
 
     $.each(pedido, function(idx) {        
         $("#pedidotbl tbody")
-            .append("<tr><td>"+pedido[idx].nome+"</td><td>"+pedido[idx].preco+"</td></tr>");
+            .append("<tr><td>"+pedido[idx].nome+"</td><td> R$"+pedido[idx].preco.toFixed(2)+"</td></tr>");
         sum = sum + pedido[idx].preco;
         var _href = $('#enviar').attr("href");
-        $('#enviar').attr("href", _href + "Nome: "+ pedido[idx].nome +" Preco: "+ pedido[idx].preco + "%0A");
+        $('#enviar').attr("href", _href + "Nome: "+ pedido[idx].nome +" Preco: R$"+ pedido[idx].preco.toFixed(2) + "%0A");
     });
 
-    $("#pedidotbl tfoot").append("<tr><td> Total: "+sum+"<tr><td>");
+    $("#pedidotbl tfoot").append("<tr><td> Total: R$"+sum.toFixed(2)+"<tr><td>");
 
     $("#pedidotbl").trigger('create');
 });
