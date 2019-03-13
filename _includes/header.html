@@ -1,0 +1,14 @@
+<div class="header-container container">
+  <header>
+    <a href="{{ site.url }}" class="top-link">{{ site.name }}</a>
+      <ul class="nav">
+        <!--Change the  URL here if working on an absolute domain-->
+        <li><a href="{{ site.url }}">Início</a></li>
+        <li><a href="{{ site.url }}/about">Sobre</a></li>
+        {% if site.owner.github %}
+          <li><a href="{{ site.owner.github }}?tab=repositories" target="_blank">Projetos</a></li>
+        {% endif %}
+        <li><a href="#">RSS</a></li>
+      </ul>
+  </header>
+</div>

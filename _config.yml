@@ -1,34 +1,41 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+name: Meu Blog
+description: >
+    Um blog feito para compartilhar dicas, estudos, projetos, códigos e idéias.
+about: >
+    15 anos de experiência na construção de projetos de Software. 
+    Liderou uma série de projetos em .Net utilizando metodologias agéis (scrum).  
+    Possui interesse em novas tecnologias, ciência de dados, empreendedorismo e criação de produtos inovadores.  
+    Criou um aplicativo que já tem mais de um milhão de downloads - BoaLista.  
+    Formado em engenharia de computação pela PUC RJ e  pós graduação em gerência de projeto de software pela PUC RJ. 
+ 
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Souzinha Blog
-email: fabionevesdesouza@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: souzinha
-github_username:  fabio-neves
-
-# Build settings
+master_repo: false
+url: "https://fabio-neves.github.io/"
 markdown: kramdown
-theme: minima
-gems:
-  - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
+highlighter: rouge
+gems: [jekyll-paginate]
+plugins_dir: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
+
+paginate: 4
+
+logo:             img/dr_scripto.gif
+disqus_shortname:
+
+rtl: false
+owner:
+  name:           Fábio Neves de Souza
+  avatar:         "https://avatars2.githubusercontent.com/u/8528791?s=460&v=4"
+  email:          "fabionevesdesouza@gmail.com"
+  # Social networking links used in footer. Update and remove as you like.
+  twitter: souzinha
+  github: https://github.com/fabio-neves
+  stackexchange: https://stackoverflow.com/users/1846514/souza?tab=profile
+  linkedin: https://www.linkedin.com/in/fabionevesdesouza/
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
