@@ -19,7 +19,7 @@ plugins_dir: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
 paginate: 4
 
 logo:             img/dr_scripto.gif
-disqus_shortname:
+disqus_shortname: fabio-neves
 
 rtl: false
 owner:
