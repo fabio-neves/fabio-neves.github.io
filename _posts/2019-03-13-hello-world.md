@@ -13,9 +13,13 @@ Além disso, preciso incluir uma imagem no meu post para ver se funciona.
 
 Para finalizar meu post, vou escrever um exemplo de `Hello World` usando c# e aproveitando para testar o code snippets:
 
-{% highlight csharp %}
+```csharp
 System.Console.WriteLine("Hello World!")
-{% endhighlight %}
+```
+
+Abaixo o código dessa página
+
+<script src="https://gist.github.com/fabio-neves/5475b88fcb6ea2d2208f97be0495f075.js"></script>
 
 Nos próximos posts vou tentar postar algo mais interessante do que este aqui. ;)
 
