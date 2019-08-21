@@ -13,7 +13,7 @@ categories: code
 Na minha carreira, trabalhei em empresas que ofereciam produtos ou serviços na forma de aplicações web. Como elas precisavam estar sempre disponíveis, era muito importante ter alguma forma de monitorá-las.
 Isso, geralmente, era responsabilidade de uma equipe de operações.
 
-Para monitorar o estado da rede e a infraestrutura, essas equipes utilizam aplicações específicas que alertam quando ocorre problema e quando eles são resolvidos. Podemos citar o Nagios e o Zabbix como exemplo dessas ferramentas.
+Para monitorar o estado da rede e da infraestrutura, essas equipes utilizam aplicações específicas que alertam quando ocorre problema e quando eles são resolvidos. Podemos citar o Nagios e o Zabbix como exemplo dessas ferramentas.
 
 No caso de aplicações web, esse tipo de monitoramento não é suficiente para garantir que elas estão funcionando. Em alguns casos, essas aplicações podem ficar fora do ar sem que tenha algum problema na infraestrutura ou na rede. Como exemplo, erros na configuração ou bugs podem fazer com que a aplicação apresente erros sem que seja detectado por essas ferramentas. A solução para resolver esse problema é configurar o Nagios ou o Zabbix para fazer uma ou mais requisições de forma a cobrir os pontos prováveis de falha.
 
