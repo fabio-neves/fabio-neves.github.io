@@ -21,7 +21,7 @@ Primeiro precisamos definir uma interface que será usada como o ponto de extens
 
 <script src="https://gist.github.com/fabio-neves/14d0a84dc02b34bac16c130cd37d4650.js"></script>
 
-Após criarmos a interface, vamos criar um middleware. O middleware no nosso caso será o responsável por interceptar as requisições, verificar se a requisição é uma requisição de monitoramento e se for, ela deve rodar a sequência de passos de verificação. Observe que o middleware recebe por injeção de dependência uma coleção de objetos do tipo IHealthCheckServices. É essa coleção que será usada para definir se a aplicação está ou não funcionando. Note que se alguma chamada feita ao método Check retornar falso a aplicação é considerada não funcionando. Nesse caso, a requisição irá terminar com uma mensagem de erro e o status http 500.
+Após criarmos a interface, vamos criar um middleware. O middleware no nosso caso será o responsável por interceptar as requisições, verificar se a requisição é uma requisição de monitoramento e se for, ela deve rodar a sequência de passos de verificação. Observe que o middleware recebe por injeção de dependência uma coleção de objetos do tipo IHealthCheckServices. É essa coleção que será usada para definir se a aplicação está ou não funcionando. Note que se alguma chamada for feita ao método Check e essa retornar falso então considera-se que a aplicação não está funcionando. Nesse caso, a requisição irá terminar com uma mensagem de erro e o status http 500.
 
 <script src="https://gist.github.com/fabio-neves/5cd1f50324b0e17472ed08e7981af4ac.js"></script>
 
