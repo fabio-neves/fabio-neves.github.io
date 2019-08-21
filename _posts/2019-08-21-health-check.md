@@ -6,10 +6,6 @@ permalink: "/2019/08/health-check.html"
 comments: true
 categories: code
 ---
-
-
-<!-- <img src="/assets/img/Health-Check.png" style="width:100%" > -->
-
 Na minha carreira, trabalhei em empresas que ofereciam produtos ou serviços na forma de aplicações web. Como elas precisavam estar sempre disponíveis, era muito importante ter alguma forma de monitorá-las.
 Isso, geralmente, era responsabilidade de uma equipe de operações.
 
