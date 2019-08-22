@@ -29,7 +29,7 @@ Até agora, definimos o funcionamento principal do nosso framework. Vale explica
 
 <script src="https://gist.github.com/fabio-neves/b7071d9f079633c0daa53b83cfc69788.js"></script>
 
-Nesse artigo, minha proposta foi apresentar um framework simples com o objetivo de facilitar o processo de desenvolvimento e monitoramento de aplicações web. Agora, o código para verificar se todas as connectionstrings ou se os endereços de apis estão configurados certos, podem ser compartilhados entre diversas aplicações. Os desenvolvedores não irão precisar reescrever código para isso. Já a equipe de operações terá uma forma padrão de verificar se as aplicações ASP.Net Core estão funcionando. Elas poderão definir a url ou até mesmo como querem receber a resposta do servidor. Como sugestão, eu disponibilizei esse framework como um pacote nuget. Caso seja de seu interesse, você pode instalar usando o seguinte comando.
+Nesse artigo, minha proposta foi apresentar um framework simples com o objetivo de facilitar o processo de desenvolvimento e monitoramento de aplicações web. Desta forma, o código para verificar se todas as connectionstrings ou se os endereços de apis estão configurados certos podem ser compartilhados entre as diversas aplicações. Os desenvolvedores não irão precisar reescrever código para isso. Já a equipe de operações terá uma forma padrão de verificar se as aplicações ASP.Net Core estão funcionando. Elas poderão definir a url ou até mesmo como querem receber a resposta do servidor. Como sugestão, eu disponibilizei esse framework como um pacote nuget. Caso seja de seu interesse, você pode instalar usando o seguinte comando.
 
 ```powershell
 Install-Package FNS.HealthCheck 
