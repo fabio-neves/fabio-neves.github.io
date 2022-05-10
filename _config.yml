@@ -16,8 +16,10 @@ highlighter: rouge
 gems: [jekyll-paginate]
 plugins_dir: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
 
-paginate: 4
+paginate: 3
 
+page_excerpts: true
+excerpt_separator: <!--more-->
 logo:             img/dr_scripto.gif
 disqus_shortname: fabio-neves
 
