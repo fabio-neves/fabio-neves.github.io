@@ -10,7 +10,7 @@ Tudo começou quando eu resolvi comprar uma caixa de som dessas com bluetooth pa
 Após um pouco de pesquisa, vi que valeria mais a pena comprar uma caixa de som com um assistente virtual.
 Resumindo essa história, eu comprei um amazon echo 3º geração pois tinha um som legal e ainda vinha com a tal Alexa.
 Foi nesse momento que caiu a ficha para mim sobre uma mudança que está acontecendo nesse exato momento. A Internet das coisas.
-
+<!--more-->
 Com isso, eu resgatei a vontade de criar algo usando esses microcontroladores super fáceis de usar e programar. Escolhi o [Arduino][arduino-hp]{:target="_blank"}.
 
 Um projeto que eu achei que poderia funcionar seria capturar dados sobre a humidade, temperatura e claridade da minha horta. 

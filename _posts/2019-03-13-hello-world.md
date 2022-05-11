@@ -7,7 +7,7 @@ comments: true
 categories: welcome
 ---
 Como todo bom programador que está aprendendo alguma coisa nova, estou escrevendo este post para aprender e usar o [Jekyll][jekyll-docs]{:target="_blank"}, [Github Pages][github-pages]{:target="_blank"} e o template [White Paper][white-paper]{:target="_blank"}. E nada melhor que usar o manjado [Hello World!][hello-world-wiki]{:target="_blank"} como tema desse post.
-
+<!--more-->
 Além disso, preciso incluir uma imagem no meu post para ver se funciona.
 
 ![Hello World!](/assets/img/Hello-World.png)
