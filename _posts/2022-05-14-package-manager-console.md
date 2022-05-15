@@ -9,7 +9,9 @@ categories: Visual Studio
 
 Quem programa em .Net para web já está acostumado a utilizar pacotes [NuGet][nuget-home]{:target="_blank"} em suas aplicações. Para quem não conhece, essa é uma forma moderna de compartilhar código entre aplicações. O código compartilhado, que resolve um problema ou disponibiliza uma funcionalidade comum a diversas aplicações, é compilado e depois empacotado em um arquivo zip de extensão.nupkg para ser publicado em um repositório. <!--more--> Outros desenvolvedores poderão, utilizando uma ferramenta própria, consultar, baixar e instalar esse código de forma a adicionar essa funcionalidade em suas aplicações. No Visual Studio isso pode ser feito de duas formas. A primeira é utilizando o Package Manager UI. Para utilizar, o programador deve selecionar com o botão direito o projeto e escolher a opção Gerenciar Pacotes de NuGet.... A segunda opção é uma ferramenta de linha de comando que se encontra no menu Ferramenta, na opção Nuget Gerenciador de pacotes > Gerenciador de Pacotes Console. 
 
-![Hello World!](/assets/img/console-gerenciador-pacotes-fig-01.png)
+<div style="display:flex; justify-content: center">
+<img src="/assets/img/console-gerenciador-pacotes-fig-01.png" />
+</div>
 
 Nesta opção o desenvolvedor utiliza comandos específicos do poweshell para localizar, instalar, atualizar e remover os pacotes NuGet de sua aplicação. Os comandos mais conhecidos são o Install-Package e o Uninstall-Package. Você só precisa passar o nome do pacote que deseja instalar ou desinstalar e ele já faz a instalação ou a desinstalação do pacote. No caso da instalação será utilizada a última versão, mas existe também a opção de utilizar o parâmetro **-Version** com o número da versão específica. 
 
