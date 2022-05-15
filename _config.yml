@@ -16,7 +16,7 @@ highlighter: rouge
 gems: [jekyll-paginate]
 plugins_dir: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
 
-paginate: 3
+paginate: 4
 
 page_excerpts: true
 excerpt_separator: <!--more-->
