@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Console do Gerenciador de Pacotes NuGet - Visual Studio"
-date:   2021-02-28
-permalink: "/2021/05/console-gerenciador-pacotes.html"
+date:   2022-05-14
+permalink: "/2022/05/console-gerenciador-pacotes.html"
 comments: true
 categories: Visual Studio
 ---
