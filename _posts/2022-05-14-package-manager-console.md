@@ -34,10 +34,10 @@ Já ao digitar [Get-Package][get-package-ref]{:target="_blank"} no Console Geren
 Get-Package | where ProjectName -eq FNS.MinhaApi
 ```
 
-O Get-Package quando utilizado com a flag -update lista quais pacotes possuem versões mais novas no repositório do [NuGet][nuget-home]{:target="_blank"}. Muito útil quando você precisa saber quais são os pacotes que estão desatualizados.
+O Get-Package quando utilizado com a flag -update lista os pacotes que possuem versões mais novas no repositório do [NuGet][nuget-home]{:target="_blank"}. Muito útil quando você precisa saber quais são os pacotes que estão desatualizados. Abaixo coloquei um exemplo que lista os projetos (projectname) da minha solução que estão com algum pacote que tem o Id começando com FNS desatualizado.
 
 ```powershell
-Get-Package -update
+get-package -update | where id -like FNS* | select Id, projectName, Version | Format-Table -autosize -wrap
 ```
 
 Para atualizar todos os pacotes do projeto basta utilizar o comando [Update-Package][update-package-ref]{:target="_blank"}. Caso queira atualizar apenas um pacote específico utilize o comando junto com o identificador do pacote. Existe o parâmetro -Version onde é possível passar a versão específica a ser atualizada.
