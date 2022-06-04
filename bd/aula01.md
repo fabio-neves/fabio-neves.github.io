@@ -16,9 +16,13 @@ title: Aula 01
 
 Falar um pouco de modelo conceitual, lógico e físico -->
 
+## Aula 01 - Introdução
+
 ### Sistema gerenciador de Banco de Dados
 
 Um sistema gerenciador de banco de dados (SGBD) é um conjunto de ferramentas ou um sistema de software que tem a função de criar, atualizar e remover bancos de dados. Ele permite controlar o acesso pelos diversos usuários e fornece uma interface de comunicação única para que os usuários possam inserir, atualizar, remover e consultar os dados desses bancos. Ele também pode ser utilizado em diversas outras tarefas como a criação de cópias de segurança, melhoria de performance das consultas e a disponibilidade e a segurança dos dados. O importante aqui é diferenciar o SGBD de um banco de dados. São conceitos diferentes que muitas vezes são usados como sinônimos. Nesse curso, vamos utilizar o SGBD da Microsoft chamado de SQL Server para aprender a modelar, criar e consultar os dados de um  banco de dados.
+
+[Download do SQL Server](https://www.microsoft.com/pt-br/download/details.aspx?id=55994)
 
 ### Banco de Dados, Tabelas e Registros
 
