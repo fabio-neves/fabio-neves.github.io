@@ -3,7 +3,7 @@ layout: curso
 title: Aula 01
 ---
 
-<!-- # Banco de Dados
+# Banco de Dados
 
 - Sistema gerenciador de banco de dados
 - Banco de dados
@@ -14,7 +14,7 @@ title: Aula 01
 - Noção de chave candidata e chave primária
 - Introdução ao SQL
 
-Falar um pouco de modelo conceitual, lógico e físico -->
+Falar um pouco de modelo conceitual, lógico e físico
 
 ## Aula 01 - Introdução
 
