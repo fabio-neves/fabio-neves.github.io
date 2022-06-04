@@ -63,5 +63,13 @@ INSERT INTO Aluno (Matricula, Nome, DataInscricao) VALUES (2,'Antônio Neves','2
 SELECT * FROM Aluno WHERE MAtricula = 1;
 SELECT * FROM Aluno WHERE MAtricula = 2;
 
+-- REMOVER UMA TABELA  
+
+DROP TABLE Aluno;
+DROP TABLE Curso;
+
+-- REMOVER UM BANCO DE DADOS
+
+DROP DATABASE TESTE;
 
 ```
