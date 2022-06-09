@@ -42,7 +42,13 @@ O Get-Package quando utilizado com a flag **-Update** lista os pacotes que possu
 get-package -update | where id -like FNS* | select Id, projectName, Version | Format-Table -autosize -wrap
 ```
 
-Para atualizar todos os pacotes do projeto basta utilizar o comando [Update-Package][update-package-ref]{:target="_blank"}. Caso queira atualizar apenas um pacote específico utilize o comando junto com o identificador do pacote. Existe o parâmetro **-Version** onde é possível passar a versão específica a ser atualizada.
+Para atualizar esses pacotes do projeto basta utilizar o comando [Update-Package][update-package-ref]{:target="_blank"}. 
+
+```powershell
+get-package -update | where id -like FNS* | Update-Package
+```
+
+Caso queira atualizar apenas um pacote específico utilize o comando [Update-Package][update-package-ref]{:target="_blank"} junto com o identificador do pacote. Existe o parâmetro **-Version** onde é possível passar a versão específica a ser atualizada.
 
 Esse texto teve o propósito de iniciar os desenvolvedores .Net na ferramenta do Visual Studio chamada Console do Gerenciador de Pacotes e mostrar suas vantagens. Para isso, descrevi os principais comandos e dei alguns exemplos práticos de como utilizar cada um. Além disso, deixei claro que em um ambiente com muitos projetos e pacotes a versão console facilita o trabalho de administração e evita erros. 
 
