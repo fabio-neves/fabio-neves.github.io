@@ -24,15 +24,17 @@ Um sistema gerenciador de banco de dados (SGBD) é um conjunto de ferramentas ou
 
 [Download do SQL Server](https://www.microsoft.com/pt-br/download/details.aspx?id=55994)
 
-### Banco de Dados, Tabelas e Registros
+### Banco de Dados, Tabelas e Tuplas (Registros)
 
-O banco de dados pode ser visto como um conjunto de dados (registros) que estão relacionados entre si com o objetivo de juntos fornecerem informações para seus usuários. Iremos tratar especificamente dos bancos de dados relacionais. Existem outros tipos, mas não são tão importantes.
+O banco de dados pode ser visto como conjuntos de dados que estão relacionados entre si com o objetivo de juntos fornecerem informações para seus usuários. Iremos tratar nesse curso dos bancos de dados relacionais. Existem outros tipos, mas não são tão importantes.
 
- Em um banco de dados relacional, os dados são organizados em relações. Relações também são chamadas de tabelas. Uma tabela é descrita por um conjunto de atributos. Os atributos são formados por um identificador e um tipo de dado. Por exemplo: Uma tabela que representa os dados de alunos de uma escola pode ter um atributo cujo identificador é “nome_do_aluno” e o tipo de dado desse atributo é texto (o tipo texto tem o nome de varchar). O atributo também pode informar se ele permite valores nulos ou não. O atributo também é conhecido como as colunas de um tabela. Uma tabela possui um conjunto de registros. Cada registro possui um valor para cada atributo da tabela. O registro pode possuir também o valor nulo caso o atributo da tabela permita essa possibilidade. O valor nulo representa a ausência de valor.  O registro também é conhecido como uma linha da tabela. Os dados são inseridos através desses registros. 
+ Em um banco de dados relacional, os dados são organizados em relações. As relações possuem uma estrutura de tabela. Uma relação é descrita por um conjunto de atributos. Os atributos são formados por um identificador e um tipo de dado. Por exemplo: Uma tabela que representa os dados de alunos de uma escola pode ter um atributo cujo identificador é “nome_do_aluno” e o tipo de dado desse atributo é texto (o tipo texto tem o nome de varchar). O atributo também pode ser entendido como sendo as colunas da tabela. 
+ 
+ A relação possui um conjunto de tuplas. Cada tupla define um valor para cada atributo da relação. Podemos dizer também que a tupla define os valores das colunas de uma determinada linha da tabela. A tupla pode definir também o valor nulo para algum atributo da relação. Veremos mais tarde que a tabela pode criar uma restrição obrigando que a tupla tenha sempre que definir um valor para determinados atributos. 
 
-### Consulta de registros, chaves e a linguagem SQL
+### Consulta, chaves e a linguagem SQL
 
-Para acessar um registro de uma tabela, vamos precisar saber a definição de chave de uma tabela. Uma chave é um conjunto de um ou mais atributos que definem a unicidade de cada registro dentro de uma tabela. Ou seja, é a forma na qual é possível identificar um registro dentro da tabela. Como exemplo, podemos pensar que o atributo CPF poderia ser a chave utilizada em uma tabela, que tem os dados das pessoas físicas, para localizar os registros. Cada valor de CPF vai, então, identificar unicamente um registro de uma pessoa dentro dessa tabela. Assim, é através do nome da tabela e do valor da chave dessa tabela (por exemplo um número de cpf) que será possível montar um comando que irá buscar esse registro no banco de dados. Veremos mais tarde que essa busca será feita utilizando uma linguagem de “programação” chamada de SQL.
+Para acessar uma tupla de uma relação, vamos precisar saber a definição de chave. Uma chave é um conjunto de um ou mais atributos que definem a identidade de cada tupla dentro de uma relação. Ou seja, é a forma na qual é possível identificar uma linha dentro da tabela. Como exemplo, podemos pensar que o atributo CPF poderia ser a chave utilizada em uma tabela, que tem os dados das pessoas físicas, para localizar uma determinada pessoa. Cada valor de CPF vai, então, identificar unicamente um registro de uma pessoa dentro dessa tabela. Assim, é através do nome da tabela e do valor da chave dessa tabela (por exemplo um número de cpf) que será possível montar um comando que irá buscar esse registro no banco de dados. Veremos mais tarde que essa busca será feita utilizando uma linguagem de “programação” chamada de SQL.
 
 ### Comandos utilizados na aula  
 
