@@ -7,8 +7,6 @@ comments: true
 categories: AI
 ---
 
-# Parem as máquinas!
-
 A inteligência artificial (IA) tem a possibilidade de influenciar o rumo da humanidade nos próximos anos. Hoje em dia ela está presente em diversas atividades da nossa vida: nos resultados dos nossos exames médicos, nas decisões financeiras, nas recomendações de vídeos e música (youtube, netflix, spotify etc) , nas nossas redes sociais, nas propagandas, e em diversos outros lugares. Além disso, existem diversas universidades, governos e empresas privadas investindo milhões em pesquisa e desenvolvimento nessa área. Atualmente, com o surgimento do ChatGPT, fomos surpreendidos com a sua capacidade de executar tarefas e de responder perguntas que só eram possíveis por seres humanos especializados. Isso mostra que estamos vivendo uma nova revolução industrial e que as máquinas, tal como o ChatGPT, terão um papel primordial nas nossas vidas. Existe um debate enorme sobre esse assunto e os principais pontos são: As máquinas irão nos tornar obsoletos? A IA irá trazer os benefícios, assim como foi com a prensa móvel, ou estamos diante de uma nova invenção maligna, como a bomba atômica? Poderemos reverter as consequências? É importante dizer que já existem grupos que se posicionaram contra e não querem o seu desenvolvimento e outros que acham que teremos que encontrar caminhos para tirar o melhor proveito dessa inovação.      
 <!--more-->     
 
