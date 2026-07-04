@@ -8,6 +8,7 @@ categories: Low Code
 ---
 
 Tudo começou com uma ideia antiga. Gostaria de registrar em um banco de dados todos os itens que eu comprei no supermercado e seus preços. Acho que nem é preciso dizer o valor que isso tem para quem faz as compras da casa. Posso usar essa informação para fazer a contabilidade da casa de forma mais detalhada, gerar uma nova lista de compras, controlar a minha despensa e até mesmo pesquisar preços em outros estabelecimentos. No mundo da IA, essa informação é essencial para que o agente assuma a função na casa. Então, antes de ficar viajando na maionese, precisei validar a minha ideia. 
+<!--more--> 
 
 Uma forma simples de obter as informações da compra é ler a nota fiscal que você recebe após o pagamento. Antigamente você teria que fazer o OCR dessa nota, mas hoje em dia as notas já vêm com um QR Code apontando para um link da receita, onde essas informações já estão estruturadas em um documento HTML. 
 
