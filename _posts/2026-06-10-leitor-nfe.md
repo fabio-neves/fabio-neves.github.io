@@ -38,6 +38,6 @@ Esse fluxo do power automate pode ser agendado para ser executado de tempos em t
 PAD.Console.Host.exe "ms-powerautomate:/console/flow/run?workflowName=Leitor NFe
 ```
 
-Essa publicação teve o objetivo de mostrar a experiência que eu tive com o Power Automate para resolver um problema prático. Acho que ele serve como um bom ponto de partida para outras pessoas se aventurarem nesse mundo e terem outras ideias de automação. Eu vou deixar [aqui](repositorio-ref){:target="_blank"} o link do repositório onde se encontram o código do fluxo. Caso alguém se interesse em sugerir melhorias, não deixe de fazer um pull request.
+Essa publicação teve o objetivo de mostrar a experiência que eu tive com o Power Automate para resolver um problema prático. Acho que ele serve como um bom ponto de partida para outras pessoas se aventurarem nesse mundo e terem outras ideias de automação. Eu vou deixar [aqui][repositorio-ref]{:target="_blank"} o link do repositório onde se encontram o código do fluxo. Caso alguém se interesse em sugerir melhorias, não deixe de fazer um pull request.
 
 [repositorio-ref]: https://github.com/fabio-neves/LeitorNfe
