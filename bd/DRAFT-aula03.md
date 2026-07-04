@@ -1,11 +1,10 @@
 ---
 layout: curso
-title: Aula 02
+title: Aula 03
 ---
 
-# Banco de Dados
 
-## Aula 02 - Integridade referencial
+## Integridade referencial
 
 ### Banco de dados, Relação, Tuplas, Atributos
 
