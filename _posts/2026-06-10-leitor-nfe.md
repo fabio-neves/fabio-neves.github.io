@@ -16,7 +16,7 @@ O próximo passo seria elaborar a solução: criar uma forma para ler o QR, ler 
 
 Uma arquitetura poderia ser desenhada da seguinte maneira.
 
-![Arquitetura](/assets/img/leitornfe-image-2.png)
+![Arquitetura](/assets/images/leitornfe-image-2.png)
 
 O celular faria o papel de ler o QR e de compartilhar o link da nota fiscal por e-mail. Na minha conta de e-mail, a nota cairá em uma pasta específica que será usada pelo Power Automate para ler esse e-mail. Ao final do processamento o power automate irá mover esse e-mail para lixeira.
 
@@ -24,11 +24,11 @@ Além de ler o e-mail e movê-lo para lixeira, o Power Automate acessará o link
 
 O banco de dados guardará todas as informações. Nessa solução, utilizei o sqlite como banco de dados. O modelo de dados seguiu o seguinte diagrama de ER
 
-![Diagrama de ER](/assets/img/leitornfe-image-5.png)
+![Diagrama de ER](/assets/images/leitornfe-image-5.png)
 
 Em linhas gerais o módulo do Power Automate seguirá o seguinte diagrama de fluxo:
 
-![Diagrama de Fluxo](/assets/img/leitornfe-image-4.png)
+![Diagrama de Fluxo](/assets/images/leitornfe-image-4.png)
 
 O ponto principal do fluxo é a extração das informações da nota. Para isso, desenvolvi uma função javascript responsável pela conversão do html em um objeto JSON. A página já possui JQuery carregado, por isso foi mais simples buscar as informações necessárias.
 
