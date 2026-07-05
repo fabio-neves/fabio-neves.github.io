@@ -28,7 +28,9 @@ O banco de dados guardará todas as informações. Nessa solução, utilizei o s
 
 Em linhas gerais o módulo do Power Automate seguirá o seguinte diagrama de fluxo:
 
-![Diagrama de Fluxo](/assets/images/leitornfe-image-4.png)
+<div style="display:flex; justify-content: center">
+    <img src="/assets/images/leitornfe-image-4.png" alt="Diagrama de Fluxo" height="100" width="50" />
+</div>
 
 O ponto principal do fluxo é a extração das informações da nota. Para isso, desenvolvi uma função javascript responsável pela conversão do html em um objeto JSON. A página já possui JQuery carregado, por isso foi mais simples buscar as informações necessárias.
 
